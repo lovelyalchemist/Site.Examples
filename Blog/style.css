@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Raleway');
+/*********************
+Box Sizing
+*********************/
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+
+html,
+body {
+ box-sizing: border-box;
+    font-family: 'Hind', sans-serif;
+    line-height: 1.88889;
+    color: black; 
+  display: flex;
+  flex-direction: column;
+  //flex-wrap: nowrap;
+  //justify-content: space-between;
+  //align-content: flex-start;
+  //align-items: flex-start;
+  @include bp (small) {
+    flex-direction:row;
+  }
+}
+
+p { 
+	font-family: 'Raleway', sans-serif;
+	color: white;
+	clear: both;
+	width: 520px;
+	margin-left: 16px;
+	}
+h1 { 
+	font-family: 'Playfair Display', serif;
+	color: white;
+	width: 280px;
+	clear: both;
+	margin-left: 8px;
+	font-size: 24px;
+	}
+h2 {
+	color: white;
+	width: 280px;
+	margin-left: 8px;
+}
+a {
+	font-family: 'Playfair Display', serif;
+	font-size: 18px;
+}	
+
+a:link { 
+	text-decoration: none; 
+	color: black;
+	}
+a:visited { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: black;
+	}
+a:hover, a:focus, a:active { 
+	text-decoration: none;
+	color: red;
+	}
+abbr {
+	border-bottom: none;
+	}
+
+
+/* specific divs */
+
+
+.button {
+	width: 120px;
+	height: 32px;
+	background: #00b6df;
+	border: none;
+	cursor: pointer;
+	margin-top: 24px;
+	font-family: 'helvetica','Open Sans', sans-serif;
+	font-size: 1.1em;
+	text-align: center;
+	text-transform: uppercase;
+	transition: background 0.6s linear;
+}
+.button:hover {
+	background: #6eb7cb;
+}
+
+.container {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  -ms-flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -ms-box-orient: horizontal;
+  height: 100%;
+
+}
+.sidebar {
+    min-width: 20%;
+    background-image: url(images/logo.dicle.png);
+	background-position: top;
+	background-repeat: no-repeat;
+	color: black;
+	font-size: 32px;
+    order: 0;
+    flex: 0 1 340px;
+    @include bp (small) {
+    flex: 0 1 320px;  
+    flex-direction:row;
+  }
+}
+.sidebar li {
+	border-bottom: 1px solid black;
+	width: 160px;
+}
+.sidebar ul {
+	list-style-type: none;
+	margin-top: 65%;
+}
+.content {
+    width: 80%;
+    flex: 0 1 100%;
+    min-height: 100vh;
+    flex-direction: column;
+    background-image: url(images/dragon-1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.textanimation {
+	width: 100%;
+	position: center;
+	animation: pop-out 2s ease-in-out;
+	animation-fill-mode: forwards;
+}
+@keyframes pop-out {
+  0% {	transform: scale3d(0, 0, 1);
+    	opacity: 0,5}
+    
+  100% { transform: scale3d(1, 1, 1);
+    opacity: 1 }
+}
+
+.textbackground {
+	font-family: 'Poppins', sans-serif;
+	position: absolute;
+	color: #cfd8dc;
+	font-size: 72px;
+	font-weight: 100; 
+	margin-left: 10%;
+	margin-top: -1%;
+	margin-bottom: -24px;
+	z-index: -1;
+}
+.textbig {
+	font-family: 'Poppins', sans-serif;
+	font-size: 6.5em;
+	color: white;
+	font-weight: 150;
+	line-height: 50px;
+ 	margin-left: 48px;
+ 	margin-top: -56px;
+ 	margin-bottom: -48px;
+}
+.about {
+	 width: 100%;
+    flex: 0 1 100%;
+    min-height: 100vh;
+    flex-direction: column;
+    background-image: url(images/dragon-2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.about p {
+	width: 560px;
+	display: flex; 
+	align-self: center;
+}
+.boxabout {
+	display: flex; 
+	width: 640px;
+	height: 480px;
+	border: 2px solid #64b5f6;
+	border-radius: 8px;
+	justify-content: center;
+	align-self: flex-start;
+	flex-wrap: wrap;
+	flex-direction: column;
+	margin-left: 32px;
+	background-color: rgba(129,212,250, 0.5);
+}
+.text-body {
+	width: 560px;
+	overflow: hidden;
+	margin-left: 32px;
+}
+.articles {
+	width: 80%;
+    flex: 0 1 100%;
+    min-height: 100vh;
+	background-image: url(images/dragon-3.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: #2a4c67;
+	padding: 0;
+	list-style: none;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	justify-content: flex-start;
+}
+.posts {
+	width: 980px;
+	margin-left: 16px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+.box {
+	display: flex; 
+	width: 960px;
+	height: 120px;
+	border: 2px solid #64b5f6;
+	border-radius: 8px;
+	justify-content: center;
+	align-self: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+	margin: 8px;
+	background-color: rgba(129,212,250, 0.5);
+}
+
+.boxpost {
+	width: 80%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-wrap; wrap;
+	flex-direction: column;
+
+}
+.boxpost p{
+	width: 900px;
+}
+.boxpost h1 {
+	width: 400px;
+	font-size: 24px;
+}
+
+.share {
+	width: 72px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+@media (max-width: 667px) {
+	.container {
+	  display: -ms-flexbox;
+	  display: -webkit-box;
+	  display: -moz-box;
+	  display: -ms-box;
+	  -ms-flex-direction: row;
+	  -webkit-box-orient: vertical;
+	  -moz-box-orient: vertical;
+	  -ms-box-orient: vertical;
+	  height: 100%;
+
+}
+	.sidebar {
+		display: flex;
+		justify-content: flex-start;
+		align-content: flex-start;
+		flex-wrap: wrap;
+		flex-direction: row;
+		background-image: url(images/logo.dicle.png);
+		background-position: left top;
+		background-repeat: no-repeat;
+		color: black;
+		font-size: 22px;
+		height: 400px;
+	}
+
+	.sidebar li {
+		border-bottom: 1px solid black;
+		width: 90px;
+		margin-top: 8px;
+	}
+	.sidebar ul {
+		list-style-type: none;
+		margin-top: 50%;
+	}
+    .about {
+        width: 100%;
+        flex: 0 1 100%;
+        min-height: 100vh;
+}
+
+    .about p {
+        width: 264px;
+        display: flex; 
+        align-self: center;
+    }
+    .boxabout {
+        display: flex; 
+        width: 320px;
+        border: 2px solid #64b5f6;
+        border-radius: 8px;
+        justify-content: center;
+        align-self: flex-start;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-left: 8px;
+        background-color: rgba(129,212,250, 0.5);
+    }
+    .text-body {
+        width: 304px;
+        overflow: hidden;
+        margin-left: 32px;
+    }
+	.articles {
+		width: 100%;
+   		flex: 0 1 100%;
+    	min-height: 100vh;
+		width: 400px;
+		background-image: url(images/dragon-3.jpg);
+		background-size: cover;
+		background-position: 100% 100%;
+		background-repeat: no-repeat;
+		background-color: #2a4c67;
+		padding: 0;
+		list-style: none;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: column wrap;
+		justify-content: flex-start;
+	}
+	.posts {
+		width: 320px;
+		height: 100%;
+		margin-left: 8px;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+	.box {
+		display: flex; 
+		width: 304px;
+		height: 100%;
+		border: 2px solid #64b5f6;
+		border-radius: 8px;
+		justify-content: center;
+		align-self: center;
+		flex-wrap: wrap;
+		flex-direction: column;
+		margin: 16px;
+		background-color: rgba(129,212,250, 0.5);
+	}
+	.box p{
+		width: 264px;
+	}
+	.content {
+        width: 100%;
+   		flex: 0 1 100%;
+    	min-height: 100vh;
+		display: flex;
+        justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		flex-direction: column;
+		background-image: url(images/dragon-1.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		z-index: 4;
+	}
+	.boxpost {
+		width: 264px;
+		display: flex;
+		flex-wrap; wrap;
+		flex-direction: column;
+	}
+	.boxpost p{
+		width: 264px;
+        font-size: 16px;
+	}
+	.boxpost h1 {
+		width: 280px;
+	}
+	.textbackground {
+		font-family: 'Poppins', sans-serif;
+		position: absolute;
+		color: #cfd8dc;
+		font-size: 36px;
+		font-weight: 80; 
+		margin-left: 14%;
+		margin-top: 2%;
+		margin-bottom: -24px;
+		z-index: -1;
+
+	}
+	.textbig {
+		font-family: 'Poppins', sans-serif;
+		font-size: 3.5em;
+		color: white;
+		font-weight: 80;
+		line-height: 50px;
+	 	margin-left: 16px;
+	 	margin-top: -64px;
+	 	margin-bottom: -48px;
+	}
+}

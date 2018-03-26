@@ -1,0 +1,301 @@
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Raleway');
+html ,
+body { 
+	line-height: 1.88889;
+	color: black; 
+	margin: 0; 
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	}
+p { 
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px;
+	color: black;
+	}
+h1 { 
+	font-family: 'Playfair Display', serif;
+	letter-spacing: 1px; 
+	margin-bottom: 0; 
+	color: black;
+	font-size: 32px;
+	}
+a {
+	font-family: 'Playfair Display', serif;
+	font-size: 24px;
+}	
+
+a:link { 
+	text-decoration: none; 
+	color: black;
+	}
+a:visited { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: black;
+	}
+a:hover, a:focus, a:active { 
+	text-decoration: none;
+	color: red;
+	}
+abbr {
+	border-bottom: none;
+	}
+
+
+/* specific divs */
+.loginpage {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	background-image: url(images/tower2.jpg);
+	background-size: cover; 
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100%;
+}
+.form {
+  display: flex;
+  justify-content: center;
+}
+
+.form-wrapper {
+  width:304px;
+  height:304px;
+  display: flex;
+  align-self: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background: rgba(0,0,0,0.27);
+  padding: 16px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 0px rgba(0,0,0,0.6),inset 0px 1px 0px rgba(255,255,255,0.04);
+}
+.form-title {
+	width: 100%;
+}
+.form-input {
+	border: none;
+	background: #e8e8e8;
+ 	color: black;
+	padding-left: 16px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2em;
+	height: 40px;
+	width: 224px;
+
+}
+.form-input-user {
+	
+ 	color: white;
+	padding-left: 8px;
+	height: 40px;
+	width: 40px;
+	background-image: url(images/user-line.svg);
+	background-repeat: no-repeat;
+
+}
+.form-input-password {
+	
+ 	color: white;
+	padding-left: 8px;
+	background-image: url(images/key-line.svg);
+	background-repeat: no-repeat;
+	height: 40px;
+	width: 40px;
+}
+.button {
+	width: 120px;
+	height: 32px;
+	background: #00b6df;
+	border: none;
+	cursor: pointer;
+	margin-top: 24px;
+	font-family: 'helvetica','Open Sans', sans-serif;
+	font-size: 1.1em;
+	text-align: center;
+	text-transform: uppercase;
+	transition: background 0.6s linear;
+}
+.button:hover {
+	background: #6eb7cb;
+}
+
+.container {
+  height: 100%;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  -ms-flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -ms-box-orient: horizontal;
+
+}
+
+.sidebar {
+	width: 25%;
+	display: flex;
+	justify-content: flex-start;
+	align-content: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+	background-image: url(images/dragon-1.png);
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: 75%;
+	color: black;
+	font-size: 26px;
+
+}
+.sidebar li {
+	border-bottom: 1px solid black;
+	width: 180px;
+}
+.sidebar ul {
+	list-style-type: none;
+	height: 390px;
+	margin-top: 50%;
+}
+.sidebar ol {
+	font-size: 20px;
+	font-weight: italic;
+}
+.content {
+	width: 75%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #b0bec5;
+	background-image: url(images/dragon-3.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: 25%;
+}
+.main {
+	width: 75%;
+	height: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-wrap; wrap;
+	flex-direction: column;
+
+}
+.text-body {
+	width: 880px;
+	height: 320px;
+	overflow: hidden;
+	background-color: #90a4ae;
+	border-radius: 8px;
+	margin: 8px;
+	padding: 4px;
+}
+.text-button {
+	width: 80px;
+	border: 2px solid #1e88e5;
+	background: #2196f3;
+	padding: 4px;
+	margin: 2px;
+	display: flex;
+	align-self: center;
+	justify-content: center;
+	margin-bottom: 8px;
+}
+.text-button a {
+	color: white;
+}
+.text-button:hover{
+	background-color: #42a5f5;
+}
+.buttonsfortext {
+	display: flex;
+	border-bottom: 1px solid #cfd8dc;
+
+}
+.text--animation {
+	width: 100%;
+	position: bottom;
+	animation: pop-out 2s ease-in-out;
+	animation-fill-mode: forwards;
+}
+@keyframes pop-out {
+  0% {	transform: scale3d(0, 0, 1);
+    	opacity: 0,5}
+    
+  100% { transform: scale3d(1, 1, 1);
+    opacity: 1 }
+}
+
+.text__background {
+	font-family: 'Poppins', sans-serif;
+	position: absolute;
+	color: #cfd8dc;
+
+	font-size: 72px;
+	font-weight: 100; 
+	margin-left: 10%;
+	margin-top: -5%;
+	margin-bottom: -24px;
+	z-index: -1;
+}
+.text--big {
+	font-family: 'Poppins', sans-serif;
+	font-size: 6.5em;
+	color: white;
+	font-weight: 150;
+	line-height: 50px;
+ 	margin-left: 48px;
+ 	margin-top: -56px;
+ 	margin-bottom: -48px;
+}
+
+.dragon {
+	z-index: 999 !important;
+	margin-top: 50%;
+	width: 130px;
+	height: 120px;
+	background-image: url(images/dragon.png);
+
+    -webkit-animation: play .8s steps(4) infinite;
+       -moz-animation: play .8s steps(4) infinite;
+        -ms-animation: play .8s steps(4) infinite;
+         -o-animation: play .8s steps(4) infinite;
+}
+
+@-webkit-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: 520px; }
+}
+
+@-moz-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: 520px; }
+}
+
+@-ms-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: 520px; }
+}
+
+@-o-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: 520px; }
+}
+
+@keyframes play {
+   from { background-position:    0px; }
+     to { background-position: 520px; }
+}
+
+.articles {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	margin: 8px;
+	background-color: rgba(176,190,197, 0.8);
+	width: 640px;
+	padding: 8px;
+}

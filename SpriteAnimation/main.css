@@ -1,0 +1,119 @@
+html {
+	}
+body { 
+	margin: 0;
+    padding:0;
+	background-image: url(images/background.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position:bottom;
+	min-height: 100vh;
+	
+}
+p { 
+	
+	}
+h1{
+    font-size: 36px;
+    color: orange;
+}
+h3 { 
+	
+	}
+a:link { 
+	
+	}
+a:visited { 
+	
+	}
+a:hover, a:focus, a:active { 
+	
+	}
+.content {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	margin-right: -500px;
+	
+}
+
+.cloud {
+	width: 1177px;
+	height: 637px;
+	position: relative;
+	background-image: url("images/cloud-bg.png");
+	 -webkit-animation: play 40s infinite;
+       -moz-animation: play 40s infinite;
+        -ms-animation: play 40s infinite;
+         -o-animation: play 40s infinite;
+            animation: play 40s infinite;
+	
+}
+@-webkit-keyframes play {
+   from { left: -200px; }
+     to { left: 1100px; }
+}
+
+@-moz-keyframes play {
+    from { left:-200px; }
+     to { left: 1100px; }
+}
+
+@-ms-keyframes play {
+    from { left:-200px; }
+     to { left: 1100px; }
+}
+
+
+.castle {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	background-image: url("images/castle.png");
+	width: 640px;
+	height: 500px;
+	-webkit-animation: castleplay .8s steps(4) infinite;
+       -moz-animation: castleplay .8s steps(4) infinite;
+        -ms-animation: castleplay .8s steps(4) infinite;
+         -o-animation: castleplay .8s steps(4) infinite;
+            animation: castleplay .8s steps(4) infinite;
+}
+@-webkit-keyframes castleplay {
+   from { background-position:    0px; }
+     to { background-position: -2560px; }
+}
+
+@-moz-keyframes castleplay {
+   from { background-position:    0px; }
+     to { background-position: -2560px; }
+}
+
+@-ms-keyframes castleplay {
+   from { background-position:    0px; }
+     to { background-position: -2560px; }
+}
+.castlemoving{
+	content: '';
+	z-index: -2;
+	height: 500px;
+	position: relative;
+	 -webkit-animation: castlemoving 26s infinite;
+       -moz-animation: castlemoving 26s infinite;
+        -ms-animation: castlemoving 26s infinite;
+         -o-animation: castlemoving 26s infinite;
+            animation: castlemoving 26s infinite;
+}
+@-webkit-keyframes castlemoving {
+   from { right: 0; top: 20px; left: -200px; }
+     to { right: 100; top: -250px;left: -1200px; }
+}
+
+@-moz-keyframes castlemoving {
+    from { right: 0; top: 20px; left: -200px; }
+     to { right: 100; top: -250px; left: -1200px; }
+}
+
+@-ms-keyframes castlemoving {
+    from { right: 0; top: 20px; left: -200px;}
+     to { right: 100; top: -250px; left: -1200px;}
+}
